@@ -20,15 +20,35 @@ body
   @include dot-pattern($dark-gray, $dot, $dot-size, $dot-space)
 
 .grid
+  height: 100vh
   &__wrapper
     width: 100vw
     height: 100vh
+    input[type=checkbox]
+      position: absolute
+      cursor: pointer
+      width: 100%
+      height: 100%
+      z-index: 3
+      opacity: 0
+      &:checked
+        // Slide left
+        &~div.grid__panel--left
+          background-color: $panel-light
+          transform: translateX(0)
+        // Slide right
+        &~div.grid__panel--right
+          background-color: $panel-dark
+          transform: translateX(0)
   &__panel
+    transition: all 1s ease-out
     z-index: 2
     width: 50%
     height: 100%
     float: left
     &--left
       background-color: $panel-light
+      transform: translateX(-100%)
     &--right
       background-color: $panel-dark
+      transform: translateX(100%)
