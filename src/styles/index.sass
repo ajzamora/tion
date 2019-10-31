@@ -1,1 +1,19 @@
+@charset 'utf-8'
+// *** Vendor ***
 @import '~css-reset-and-normalize/scss/reset-and-normalize'
+// *** Settings ***
+@import './base/colors'
+// *** Utils ***
+$dot-size: 1px
+$dot-space: 10vmax
+@mixin dot-pattern ($bg-color, $dot-color, $dot-size, $dot-space)
+  background-color: $bg-color
+  background-image: radial-gradient($dot-color $dot-size, transparent $dot-size)
+  background-size: $dot-space $dot-space
+  background-position: 0 0, 50px 50px
+
+// *** Base ***
+// *** Components ***
+
+body
+  @include dot-pattern($dark-gray, $dot, $dot-size, $dot-space)
