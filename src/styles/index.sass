@@ -15,5 +15,20 @@ $dot-space: 10vmax
 // *** Base ***
 // *** Components ***
 
+
 body
   @include dot-pattern($dark-gray, $dot, $dot-size, $dot-space)
+
+.grid
+  &__wrapper
+    width: 100vw
+    height: 100vh
+  &__panel
+    z-index: 2
+    width: 50%
+    height: 100%
+    float: left
+    &--left
+      background-color: $panel-light
+    &--right
+      background-color: $panel-dark
