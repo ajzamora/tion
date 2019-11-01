@@ -33,8 +33,21 @@ block content
           </g>
         </g>
     </svg>
+    img(src=require('../images/svg/Tion-Logo-WG.svg') id="tion")
+    img(src=require('../images/svg/chat.svg') id="chat")
     .grid__wrapper
-      input(type='checkbox' checked='')
+      input(type='checkbox')
+      
       .grid__panel.grid__panel--left
-      .grid__content
       .grid__panel.grid__panel--right
+      .grid__underneath
+        section.page
+          .page__header
+            
+          .page__middle
+            img(src=require('../images/svg/LinesBG.svg') class="linesBG")
+          .page__footer
+            .page__footer--icon
+              img(src=require('../images/svg/Instagram.svg') class="ig-icon")
+              img(src=require('../images/svg/Facebook.svg') class="fb-icon")
+              img(src=require('../images/svg/Twitter.svg') class="twitter-icon")
