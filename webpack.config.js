@@ -50,13 +50,13 @@ const entryJS = {
 };
 const entryPug = {
   arrPages: commonPages, // Add more pugEntries: const arrPages = [...commonPages, addPugfiles]; or use ES6 .filter() to exclude
-  path: `./src/html`,
+  path: `./src/html/`,
   config: function(mode) {
     const isProd = mode == "production";
     return this.arrPages.map((page) =>
       new HtmlWebpackPlugin({
-        filename: `html/${page}.html`,
-        template: `./src/html/${page}.pug`,
+        filename: isProd ? `${page}.html` : `html/${page}.html`,
+        template: `${this.path}${page}.pug`,
         inject: true,
         chunks: [`${page}`],
         minify: {
@@ -183,7 +183,7 @@ module.exports = (env, argv) => {
     path: path.resolve(__dirname, isProd ? "docs" : "dev"),
     filename: isProd ? "js/[name].[contentHash:11].js" : "js/[name].js",
     chunkFilename: 'js/[id].bundle.js',
-    publicPath: '../',
+    publicPath: isProd ? '' : '../',
   };
 
   /************************************************
