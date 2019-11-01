@@ -36,7 +36,7 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 /************************************************
 -- 1. ADD YOUR PAGES in commonPages; 2. (optional) : edit arrPages/path in entryJS and entryPug if needed
 ************************************************/
-const commonPages = ['index', 'about'];
+const commonPages = ['index'];
 const entryJS = {
   arrPages: commonPages, // Add more jsEntries: const arrPages = [...commonPages, addJSfiles]; or use ES6 .filter() to exclude
   path: './src/js/',

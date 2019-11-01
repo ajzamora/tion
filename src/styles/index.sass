@@ -1,19 +1,135 @@
+@charset 'utf-8'
+// *** Vendor ***
 @import '~css-reset-and-normalize/scss/reset-and-normalize'
-@font-face
-  font-family: 'MyModak'
-  src: url('../fonts/Modak/Modak-Regular.ttf')
-  font-weight: bold
+// *** Settings ***
+@import './base/colors'
+// *** Utils ***
+$dot-size: 1px
+$dot-space: 10vmax
+@mixin dot-pattern ($bg-color, $dot-color, $dot-size, $dot-space)
+  background-color: $bg-color
+  background-image: radial-gradient($dot-color $dot-size, transparent $dot-size)
+  background-size: $dot-space $dot-space
+  background-position: 0 0, 50px 50px
+
+// *** Base ***
+// *** Components ***
+
 
 body
+  @include dot-pattern($dark-gray, $dot, $dot-size, $dot-space)
+  // overflow: hidden
+  // height: 100%
+  // margin: 0
+
+.grid
+  height: 100vh
+  // z-index: 3
+  overflow-x: hidden
+  position: relative
   display: flex
+  justify-content: center
   align-items: center
   flex-direction: column
-  vertical-align: middle
-  width: 100%
+  &__enter
+    position: absolute
+    // width: 60vmin
+    // height: 90vh
+    z-index: 4
+  &__wrapper
+    width: 100%
+    height: 100%
+    input[type=checkbox]
+      position: absolute
+      cursor: pointer
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      opacity: 0
+      z-index: 3
+      &:checked
+        // Slide left
+        &~div.grid__panel--left
+          background-color: $panel-light
+          transform: translateX(-100%)
+        // Slide right
+        &~div.grid__panel--right
+          background-color: $panel-dark
+          transform: translateX(100%)
+  &__panel
 
-#telegram-logo
-  height: 10em
-  width: 10em
+    transition: all 1s ease-out
+    width: 50%
+    height: 100%
+    float: left
+    &--left
+      background-color: $panel-light
+      transform: translateX(0%)
+    &--right
+      background-color: $panel-dark
+      transform: translateX(0%)
+  &__underneath
+    width: 100%
+    height: 100%
+    position: absolute
+    display: flex
+    align-items: center
+    flex-direction: column
+    & > *
+      z-index: -1
 
-p
-  font-family: 'MyModak'
+.page
+  width: 80%
+  height: 100vh
+  margin: 0 auto
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-direction: column
+  &__header
+    width: 100%
+    align-self: flex-start
+    flex-grow: 1
+  &__middle
+    width: 100%
+    align-self: center
+    flex-grow: 5
+    // perspective: 25px
+  &__footer
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    align-self: flex-end
+    flex-grow: 1
+    &--icon > *
+      margin-left: 2vmin
+      margin-right: 2vmin
+      margin-bottom: 6vmin
+      width: 5vh
+      height: 5vh
+
+
+.linesBG
+  width: 80vw
+  height: auto
+  transition: transform 0.5s
+  -webkit-transition: transform 0.5s
+  -moz-transition: transform 0.5s
+  -o-transition: transform 0.5s
+
+#tion
+  position: fixed
+  top: 2vmax
+  left: 2vmax
+  width: 14vmin
+  height: 14vmin
+
+
+#chat
+  position: fixed
+  bottom: 4vmax
+  right: 3vmax
+  width: 11vmin
+  height: 11vmin
