@@ -1,8 +1,9 @@
 {
-  "name": "webpack-and-chill",
+  "name": "tion",
   "version": "1.0.0",
   "description": "A Webpack starter template to quickly start your new web projects.",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack --mode=development",
@@ -13,8 +14,8 @@
     "type": "git",
     "url": "git+https://github.com/ajzamora/webpack-setup.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Alden Zamora, Charles Yambao",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/ajzamora/webpack-setup/issues"
   },
@@ -41,5 +42,12 @@
   },
   "dependencies": {
     "css-reset-and-normalize": "^2.1.0"
-  }
+  },
+  "keywords": [
+    "portfolio",
+    "design",
+    "animation",
+    "ui",
+    "ux"
+  ]
 }
