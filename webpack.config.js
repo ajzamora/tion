@@ -180,7 +180,7 @@ module.exports = (env, argv) => {
   ];
 
   config.output = {
-    path: path.resolve(__dirname, isProd ? "dist" : "dev"),
+    path: path.resolve(__dirname, isProd ? "docs" : "dev"),
     filename: isProd ? "js/[name].[contentHash:11].js" : "js/[name].js",
     chunkFilename: 'js/[id].bundle.js',
     publicPath: '../',
