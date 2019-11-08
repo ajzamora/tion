@@ -67,7 +67,7 @@ function reset(opt) {
   particlesArray = [];
   ctx.textAlign = "center";
   let numberOfParticles = opt.textList.length;
-  let innerMargin = 100;
+  let innerMargin = 150;
   for (let i=0; i<numberOfParticles; i++) {
     let x = Math.random() * (canvas.width - innerMargin*2) + innerMargin;
     let y = Math.random() * (canvas.height - innerMargin*2) + innerMargin;
