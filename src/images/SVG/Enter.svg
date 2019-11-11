@@ -1,43 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1018.92 1282.71" style="enable-background:new 0 0 1018.92 1282.71;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#F8F6F2;}
-	.st1{fill:none;stroke:#B3D334;stroke-width:3;stroke-miterlimit:10;}
-	.st2{fill:#B3D334;}
-	.st3{fill:#3F4847;}
-	.st4{fill:none;stroke:#3F4847;stroke-width:19;stroke-miterlimit:10;}
-	.st5{fill:none;stroke:#B3D334;stroke-width:10;stroke-miterlimit:10;}
-	.st6{fill:none;stroke:#3F4847;stroke-width:5;stroke-miterlimit:10;}
-</style>
-<g>
-	<polygon class="st0" points="106.41,874.87 106.41,789.58 0,727.17 0,984.27 508.81,1282.71 508.81,1106.2 	"/>
-	<polygon class="st0" points="106.41,789.58 508.81,1025.61 508.81,1001.44 106.41,770.12 	"/>
-	<polygon class="st0" points="508.81,1106.2 508.81,1025.61 106.41,789.58 106.41,874.87 	"/>
+<svg width="504" height="334" viewBox="0 0 504 334" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="EnterImgC" filter="url(#filter0_d)">
+<g id="EnterImg">
+<g id="lower-strips">
+<path id="lower-green1" d="M92.2826 154.746L250.3 242.624V294.416L125.24 226.251L125.198 226.228V226.276V248.525L92.2826 230.22V154.746Z" fill="#BED747" stroke="#342F2E" stroke-width="0.0564446"/>
+<path id="lower-black1" d="M250.3 318.098L125.254 248.557V226.324L250.3 294.48V318.098Z" fill="#342F2E" stroke="#342F2E" stroke-width="0.0564446"/>
+<path id="lower-black2" d="M250.3 325.195L125.255 257.039V248.621L250.3 318.163V325.195Z" fill="#342F2E" stroke="#342F2E" stroke-width="0.0564446"/>
 </g>
-<polygon class="st1" points="793.63,833.17 793.63,504.29 508.81,339.85 223.99,504.29 223.99,833.17 508.81,997.6 "/>
-<g>
-	<polygon class="st2" points="0,783.62 106.4,846.03 106.4,770.14 510.11,1002.21 510.11,825.72 0,526.52 	"/>
-	<polygon class="st3" points="106.4,846.03 106.4,874.9 510.11,1106.97 510.11,1082.82 	"/>
-	<polygon class="st3" points="510.11,1002.21 106.4,770.14 106.4,846.03 510.11,1082.82 	"/>
+<g id="central">
+<path id="central-gray1" d="M249.901 84.8872L499.972 238.864V276.82L249.901 122.842V84.8872Z" fill="#F4F2F1" stroke="#342F2E" stroke-width="0.0564446"/>
+<path id="center-hexa" d="M249.924 84.7644L351.965 140.623V252.337L249.924 308.196L147.884 252.337V140.623L249.924 84.7644Z" fill="#F4F2F1" stroke="#342F2E" stroke-width="0.0564446"/>
 </g>
-<polygon class="st0" points="838.19,858.89 838.19,478.56 508.81,288.39 179.43,478.56 179.43,858.89 508.81,1049.06 "/>
-<g>
-	<polygon class="st2" points="912.52,407.83 912.52,493.12 1018.92,555.53 1018.92,298.44 510.11,0 510.11,176.51 	"/>
-	<polygon class="st3" points="912.52,493.12 510.11,257.1 510.11,281.27 912.52,512.59 	"/>
-	<polygon class="st3" points="510.11,176.51 510.11,257.1 912.52,493.12 912.52,407.83 	"/>
+<g id="upper-strips">
+<path id="upper-green1" d="M375.055 119.826V119.809L375.04 119.801L250.357 51.8432V0.0479881L407.971 87.7011V163.175L375.055 144.87V119.826Z" fill="#BED747" stroke="#342F2E" stroke-width="0.0564446"/>
+<path id="upper-black1" d="M374.998 150.559L250.357 82.6229V75.5865L374.998 144.903V150.559Z" fill="#342F2E" stroke="#342F2E" stroke-width="0.0564446"/>
+<path id="upper-black2" d="M374.998 144.838L250.357 75.5218V51.9073L374.998 119.843V144.838Z" fill="#342F2E" stroke="#342F2E" stroke-width="0.0564446"/>
 </g>
-<polygon class="st4" points="772.37,820.89 772.37,516.56 508.81,364.39 245.25,516.56 245.25,820.89 508.81,973.06 "/>
-<polygon class="st5" points="857.24,869.89 857.24,467.56 508.81,266.39 160.38,467.56 160.38,869.89 508.81,1071.06 "/>
-<g>
-	<path class="st2" d="M508.81,290.64l327.43,189.04v378.09l-327.43,189.04L181.38,857.77V479.68L508.81,290.64 M508.81,266.39
-		L160.38,467.56v402.34l348.43,201.17l348.43-201.17V467.56L508.81,266.39L508.81,266.39z"/>
+<g id="outer-hexa">
+<path id="outer-hexa2" d="M357.897 255.586V137.374L249.925 78.2685L141.952 137.374V255.586L249.925 314.692L357.897 255.586Z" stroke="#342F2E" stroke-width="0.564446" stroke-miterlimit="10"/>
+<path id="outer-hexa1" d="M249.938 85.3683L249.924 85.3609L249.911 85.3683L148.445 140.912L148.431 140.92V140.937V252.024V252.041L148.445 252.049L249.911 307.592L249.924 307.6L249.938 307.592L351.403 252.049L351.418 252.041V252.024V140.937V140.92L351.403 140.912L249.938 85.3683ZM141.98 137.391L249.924 78.3007L357.869 137.391V255.569L249.924 314.66L141.98 255.569V137.391Z" fill="#BED747" stroke="#342F2E" stroke-width="0.0564446"/>
 </g>
-<polygon class="st1" points="793.63,833.17 793.63,504.29 508.81,339.85 223.99,504.29 223.99,833.17 508.81,997.6 "/>
-<polygon class="st6" points="825.2,851.39 825.2,486.06 508.81,303.39 192.42,486.06 192.42,851.39 508.81,1034.06 "/>
-<g>
-	<path class="st2" d="M508.81,397l235.32,135.86v271.72L508.81,940.45L273.49,804.59V532.87L508.81,397 M508.81,390.08L267.49,529.4
-		v278.65l241.32,139.33l241.32-139.33V529.4L508.81,390.08L508.81,390.08z"/>
+<g id="inner-hexa">
+<path id="inner-hexa2" d="M331.597 241.189V151.771L249.925 107.062L168.252 151.771V241.189L249.925 285.898L331.597 241.189Z" stroke="#342F2E" stroke-width="1.07245" stroke-miterlimit="10"/>
+<path id="inner-hexa1" d="M249.938 116.62L249.924 116.613L249.911 116.62L176.99 156.538L176.976 156.546V156.562V236.398V236.415L176.99 236.423L249.911 276.34L249.924 276.347L249.938 276.34L322.858 236.423L322.873 236.415V236.398V156.562V156.545L322.858 156.537L249.938 116.62ZM175.173 155.561L249.924 114.641L324.676 155.561V237.399L249.924 278.319L175.173 237.399V155.561Z" fill="#BED747" stroke="#342F2E" stroke-width="0.0564446"/>
+<path id="inner-hexa3" d="M338.183 244.794V148.166L249.924 99.8519L161.665 148.166V244.794L249.924 293.108L338.183 244.794Z" stroke="#342F2E" stroke-width="0.169334" stroke-miterlimit="10"/>
+<path id="inner-hexa4" d="M347.967 250.15V142.81L249.924 89.1395L151.881 142.81V250.15L249.924 303.821L347.967 250.15Z" stroke="#342F2E" stroke-width="0.282223" stroke-miterlimit="10"/>
 </g>
+</g>
+<g id="enter-label">
+<g id="text-group">
+<path id="E-txt" d="M217.528 203.609H225.267V204.866H215.503V191.5H225.163V192.758H217.528H217.028V193.258V196.993V197.493H217.528H224.24V198.75H217.528H217.028V199.25V203.109V203.609H217.528Z" fill="#3F4847" stroke="#342F2E"/>
+<path id="N-txt" d="M239.309 200.933V191.5H240.796V204.866H239.424L231.642 194.839L230.747 193.686V195.146V204.866H229.26V191.5H230.859L238.414 201.24L239.309 202.394V200.933Z" fill="#3F4847" stroke="#342F2E"/>
+<path id="T-txt" d="M248.523 192.84H244.463V191.5H255.131V192.84H251.071H250.571V193.34V204.866H249.023V193.34H248.523V192.84Z" fill="#3F4847" stroke="#342F2E"/>
+<path id="E-txt_2" d="M260.829 203.609H268.568V204.866H258.804V191.5H268.464V192.758H260.829H260.329V193.258V196.993V197.493H260.829H267.541V198.75H260.829H260.329V199.25V203.109V203.609H260.829Z" fill="#3F4847" stroke="#342F2E"/>
+<path id="R-txt" d="M279.975 200.22L283.294 204.866H281.545L278.161 200.07L278.011 199.858H277.752H274.589H274.089V200.358V204.866H272.561V191.5H278.473C280.183 191.5 281.462 192.003 282.268 192.79C282.929 193.468 283.314 194.405 283.314 195.537V195.578C283.314 196.651 282.994 197.478 282.471 198.101C281.943 198.729 281.18 199.182 280.245 199.448L279.562 199.643L279.975 200.22ZM274.589 192.799H274.089V193.299V198.123V198.623H274.589H278.286C279.273 198.623 280.134 198.366 280.759 197.856C281.395 197.339 281.744 196.593 281.744 195.72V195.679C281.744 194.777 281.413 194.028 280.766 193.518C280.136 193.022 279.267 192.799 278.267 192.799H274.589Z" fill="#3F4847" stroke="#342F2E"/>
+</g>
+<g id="dot-group">
+<path id="dot3" d="M260.789 210.422H262.523V212.235H260.789V210.422Z" fill="#3F4847" stroke="#342F2E"/>
+<path id="dot2" d="M249.102 210.422H250.836V212.235H249.102V210.422Z" fill="#3F4847" stroke="#342F2E"/>
+<path id="dot1" d="M237.416 210.422H239.15V212.235H237.416V210.422Z" fill="#3F4847" stroke="#342F2E"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" x="88.2544" y="0" width="415.746" height="333.242" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
 </svg>

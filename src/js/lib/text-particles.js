@@ -3,11 +3,14 @@
  * (c) 2019-present Alden Zamora (https://github.com/ajzamora)
  * Released under MIT license[http://opensource.org/licenses/MIT]
  * =============================================== */
+let dpi = window.devicePixelRatio;
 
 const canvas = document.getElementById("tp__canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+let size_h = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
+let size_w = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
+canvas.setAttribute('height', size_h * dpi);
+canvas.setAttribute('width', size_w * dpi);
 
 let particlesArray;
 let textParticles = {};
@@ -64,6 +67,7 @@ function accelerate(opt) {
 }
 
 function reset(opt) {
+  fix_dpi();
   particlesArray = [];
   ctx.textAlign = "center";
   let numberOfParticles = opt.textList.length;
@@ -96,7 +100,7 @@ function connect() {
       let distance = ((particlesArray[a].pointX - particlesArray[b].pointX) * (particlesArray[a].pointX - particlesArray[b].pointX)
       + (particlesArray[a].pointY - particlesArray[b].pointY) * (particlesArray[a].pointY - particlesArray[b].pointY));
       if (distance < area) {
-        opacity = 3.1 - distance/40000;
+        opacity = 2.1 - distance/40000;
         ctx.strokeStyle = `rgba(255,255,255, ${opacity})`;
         ctx.lineWidth = 1;
         ctx.beginPath();
@@ -110,11 +114,17 @@ function connect() {
 
 window.addEventListener('resize',
   ()=> {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
     reset(options);
   }
 );
+
+
+function fix_dpi() {
+  size_h = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
+  size_w = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
+  canvas.setAttribute('height', size_h * dpi);
+  canvas.setAttribute('width', size_w * dpi);
+}
 
 textParticles.accelerate = accelerate;
 export default textParticles;
