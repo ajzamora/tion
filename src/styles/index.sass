@@ -31,14 +31,18 @@ body
   justify-content: center
   align-items: center
   flex-direction: column
-  &__enter
-    position: absolute
-    width: 60vmin
-    height: 90vh
-    z-index: 4
   &__wrapper
     width: 100%
     height: 100%
+    .svg__enter
+      position: absolute
+      width: 60vmin
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      margin: auto
+      z-index: 4
     input[type=checkbox]
       position: absolute
       cursor: pointer
@@ -60,6 +64,8 @@ body
           transform: translateX(100%)
         &~.grid__underneath
           z-index: 1
+        &~.svg__enter
+          display: none
   &__panel
     display: block
     transition: all 1s ease-out
@@ -89,15 +95,17 @@ body
   align-items: center
   flex-direction: column
   &__header
-    flex: 0 1 15vh
+    min-height: 15vh
     width: 100%
     display: flex
     justify-content: space-around
+    &--no-min
+      min-height: 0
   &__middle
-    flex: 0 1 70vh
+    min-height: 70vh
     width: 100%
   &__footer
-    flex: 0 1 15vh
+    min-height: 15vh
     width: 100%
     display: flex
     flex-direction: column
@@ -125,7 +133,7 @@ body
   top: 0
   bottom: 0
   margin: auto
-  height: 14vh
+  height: 14vmin
 
 #logo__tion
   position: fixed
@@ -144,7 +152,7 @@ body
 .tp
   position: relative
   width: 100%
-  height: 100%
+  height: 70vh
 
   #tp__canvas
     bottom: 0
