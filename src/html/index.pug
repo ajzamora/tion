@@ -5,7 +5,7 @@ block title
 block content
   .grid
     <svg class="grid__enter" width="500" height="326" viewBox="0 0 500 326" fill="none" xmlns="http://www.w3.org/2000/svg">
-      a(class="btn btn-primary" href="#testLink" role="button")
+      a(href="#Enter" role="button")
         <g id="Enter">
           <g id="lower-strips">
             <path id="lower-green1" d="M92.2543 230.903L125.226 249.24V226.943L250.328 295.13V243.274L92.2543 155.364V230.903Z" fill="#BED747"/>
@@ -33,31 +33,58 @@ block content
           </g>
         </g>
     </svg>
-    img(src=require('../images/svg/Tion-Logo-WG.svg') id="tion")
-    img(src=require('../images/svg/chat.svg') id="chat")
     .grid__wrapper
       input(type='checkbox')
-      
       .grid__panel.grid__panel--left
       .grid__panel.grid__panel--right
       .grid__underneath
+        a(href="#home" role="button")
+          img(src=require('../images/svg/Tion-Logo-WG.svg') id="logo__tion")
+        a(href="#chat" role="button")
+          img(src=require('../images/svg/chat.svg') id="btn__chat")
         section.page
           .page__header
-            
-          .page__middle
             img(src=require('../images/svg/LinesBG.svg') class="linesBG")
+          .page__middle
           .page__footer
-            .page__footer--icon
-              img(src=require('../images/svg/Instagram.svg') class="ig-icon")
-              img(src=require('../images/svg/Facebook.svg') class="fb-icon")
-              img(src=require('../images/svg/Twitter.svg') class="twitter-icon")
+            .footer__button
+              a(href="#services" role="button")
+                img(src=require('../images/svg/Services.svg'))
+              a(href="#about" role="button")
+                img(src=require('../images/svg/About.svg'))
+              a(href="#portfolio" role="button")
+                img(src=require('../images/svg/Portfolio.svg'))
+            .footer__icon
+              a(href="#instagram" role="button")
+                img(src=require('../images/svg/Instagram.svg'))
+              a(href="#facebook" role="button")
+                img(src=require('../images/svg/Facebook.svg'))
+              a(href="#twitter" role="button")
+                img(src=require('../images/svg/Twitter.svg'))
+              a(href="#contact" role="button")
+                img(src=require('../images/svg/Contact.svg'))
         
         section.page
           .page__header
-            img(src=require('../images/svg/BigButton.svg') class="section-button")
+            img(src=require('../images/svg/Servicesbig.svg') class="btn__services")
           .page__middle
             .tp
               canvas#tp__canvas
           .page__footer
-        
+            .footer__button
+              a(href="#services")
+                img(src=require('../images/svg/Services.svg'))
+              a(href="#about")
+                img(src=require('../images/svg/About.svg'))
+              a(href="#portfolio")
+                img(src=require('../images/svg/Portfolio.svg'))
+            .footer__icon
+              a(href="#instagram")
+                img(src=require('../images/svg/Instagram.svg'))
+              a(href="#Enter")
+                img(src=require('../images/svg/Facebook.svg'))
+              a(href="#twitter")
+                img(src=require('../images/svg/Twitter.svg'))
+              a(href="#contact")
+                img(src=require('../images/svg/Contact.svg'))
         
