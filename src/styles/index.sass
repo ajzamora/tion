@@ -15,57 +15,46 @@ $dot-space: 10vmax
 // *** Base ***
 // *** Components ***
 
-
 body
   @include dot-pattern($dark-gray, $dot, $dot-size, $dot-space)
-  // overflow: hidden
-  // height: 100%
-  // margin: 0
 
 .grid
   height: 100vh
-  // z-index: 3
   overflow-x: hidden
   position: relative
   display: flex
   justify-content: center
   align-items: center
   flex-direction: column
+  scroll-snap-type: y mandatory
+  overflow-y: scroll
   &__wrapper
     width: 100%
     height: 100%
     .svg__enter
       position: absolute
       width: 60vmin
+      height: 100vh
       top: 0
       left: 0
       bottom: 0
       right: 0
       margin: auto
       z-index: 4
-    input[type=checkbox]
-      position: absolute
-      cursor: pointer
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
+      transition: opacity 1000ms ease-in-out
+    .svg__enter--clicked
       opacity: 0
-      z-index: 3
-      &:checked
-        // Slide left
-        display: none
-        &~div.grid__panel--left
-          background-color: $panel-light
-          transform: translateX(-100%)
-        // Slide right
-        &~div.grid__panel--right
-          background-color: $panel-dark
-          transform: translateX(100%)
-        &~.grid__underneath
-          z-index: 1
-        &~.svg__enter
-          display: none
+    #EnterImg:hover
+      animation-name: floating
+      animation-duration: 2s
+      animation-iteration-count: infinite
+      animation-timing-function: ease-in-out
+      transform: scaleY(2)
+    #central:hover
+      cursor: pointer
+      #text-group > *, #dot-group > *
+        fill: orange
+        stroke: orange
   &__panel
     display: block
     transition: all 1s ease-out
@@ -75,21 +64,32 @@ body
     &--left
       background-color: $panel-light
       transform: translateX(0%)
+      border-right: 2px solid $panel-light
     &--right
       background-color: $panel-dark
       transform: translateX(0%)
+      border-left: 2px solid $panel-dark
+    &--leftClicked
+      background-color: $panel-light
+      border-right: 2px solid orange
+      transform: translateX(-100%)
+    &--rightClicked
+      background-color: $panel-dark
+      border-left: 2px solid orange
+      transform: translateX(100%)
   &__underneath
+    display: none
     width: 100%
     height: 100%
     position: absolute
-    display: flex
     align-items: center
     flex-direction: column
     z-index: -1
+    section.page
+      scroll-snap-align: start
 .page
   width: 80%
   min-height: 100vh
-  // auto
   display: inline-flex
   justify-content: space-between
   align-items: center
@@ -161,3 +161,11 @@ body
     position: absolute
     width: 100%
     height: 100%
+
+@keyframes floating
+  from
+     transform: translate(0, 0px)
+  50%
+     transform: translate(0, -10px)
+  to
+     transform: translate(0, -0px)
