@@ -11,7 +11,6 @@ const gridPanelUnderneath = document.getElementsByClassName('grid__underneath')[
 function enterAnimate() {
   gridPanelLeft.classList.add('grid__panel--leftClicked');
   gridPanelRight.classList.add('grid__panel--rightClicked');
-  gridPanelUnderneath.style.display = 'flex';
   svgEnter.classList.add('svg__enter--clicked');
 }
 
@@ -21,6 +20,9 @@ central.addEventListener('click', ()=> {
     svgEnter.remove();
     gridPanelLeft.remove();
     gridPanelRight.remove();
+    // show pages
+    gridPanelUnderneath.style.display = 'flex';
+    gridPanelUnderneath.style.zIndex = 1;
     textParticles.accelerate({
       textList: "BRANDING, LABEL DESIGN, PACKAGING DESIGN, ADVERTISING, LOGO DESIGN, PROMOTIONAL PRODUCTS, MOCKUP, WEB DESIGN, MOTION GRAPHICS, 3D MODEL, CLOTHING, GRAPHICS DESIGN, ART & ILLUSTRATION, MERCHANDIZE, PROOFING",
       textSize: 18,
