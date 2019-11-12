@@ -18,13 +18,9 @@ $dot-space: 10vmax
 
 body
   @include dot-pattern($dark-gray, $dot, $dot-size, $dot-space)
-  // overflow: hidden
-  // height: 100%
-  // margin: 0
 
 .grid
   height: 100vh
-  // z-index: 3
   overflow-x: hidden
   position: relative
   display: flex
@@ -78,7 +74,6 @@ body
       background-color: $panel-light
       border-right: 2px solid orange
       transform: translateX(-100%)
-    // Slide right
     &--rightClicked
       background-color: $panel-dark
       border-left: 2px solid orange
@@ -175,8 +170,3 @@ body
      transform: translate(0, -10px)
   to
      transform: translate(0, -0px)
-// .click
-//   background-color: $panel-light
-//   transform: translateX(-100%)
-//   border: 1px solid red
-//   background-color: blue
