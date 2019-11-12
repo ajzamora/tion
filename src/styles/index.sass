@@ -49,6 +49,17 @@ body
       transition: opacity 1000ms ease-in-out
     .svg__enter--clicked
       opacity: 0
+    #EnterImg:hover
+      animation-name: floating
+      animation-duration: 2s
+      animation-iteration-count: infinite
+      animation-timing-function: ease-in-out
+      transform: scaleY(2)
+    #central:hover
+      cursor: pointer
+      #text-group > *, #dot-group > *
+        fill: orange
+        stroke: orange
   &__panel
     display: block
     transition: all 1s ease-out
@@ -155,6 +166,13 @@ body
     width: 100%
     height: 100%
 
+@keyframes floating
+  from
+     transform: translate(0, 0px)
+  50%
+     transform: translate(0, -10px)
+  to
+     transform: translate(0, -0px)
 // .click
 //   background-color: $panel-light
 //   transform: translateX(-100%)
