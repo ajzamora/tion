@@ -15,6 +15,7 @@ $dot-space: 10vmax
 // *** Base ***
 // *** Components ***
 
+
 body
   @include dot-pattern($dark-gray, $dot, $dot-size, $dot-space)
 
@@ -78,24 +79,30 @@ body
       border-left: 2px solid orange
       transform: translateX(100%)
   &__underneath
-    display: none
     width: 100%
     height: 100%
     position: absolute
+    display: none
     align-items: center
     flex-direction: column
+    justify-content: space-between
     z-index: -1
-    section.page
-      scroll-snap-align: start
+
 .page
+  margin-bottom: 10vh
+  margin-bottom: calc(var(--vh, 1vh) * 10)
   width: 80%
   min-height: 100vh
+  max-height: 100vh
   display: inline-flex
-  justify-content: space-between
   align-items: center
   flex-direction: column
+  scroll-snap-align: center
   &__header
     min-height: 15vh
+    // border: 1px dashed white
+    // background-color: red
+    max-height: 15vh
     width: 100%
     display: flex
     justify-content: space-around
@@ -103,25 +110,43 @@ body
       min-height: 0
   &__middle
     min-height: 70vh
+    height: 85vh
+    max-height: 85vh
+    // border: 1px dashed green
+    // background-color: white
     width: 100%
   &__footer
+    // position: fixed
     min-height: 15vh
+    max-height: 15vh
+    bottom: 0
+    // border: 1px dashed white
+    // background-color: green
     width: 100%
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    & > *
-      margin-bottom: 15px
-      z-index: 1
-    .footer__icon img
-      margin-left: 8px
-      margin-right: 8px
-      width: 2.5vmax
-    .footer__button img
-      margin-left: 8px
-      margin-right: 8px
-      width: 8vmax
+    .footer__button
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      width: 34vw
+      & img
+        height: 4.75vh
+        margin-left: 0.4em
+        margin-right: 0.4em
+        margin-top: 0.4em
+    .footer__icon
+      width: 30vh
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      & img
+        height: 4.75vh
+        margin-left: 0.3em
+        margin-right: 0.3em
+        margin-top: 0.4em
 .linesBG
   width: 80vw
   transition: transform 0.5s
@@ -129,7 +154,7 @@ body
   -moz-transition: transform 0.5s
   -o-transition: transform 0.5s
 
-.btn__services
+.svg__arrow
   top: 0
   bottom: 0
   margin: auto
@@ -149,18 +174,9 @@ body
   width: 11vmin
   height: 11vmin
 
-.tp
-  position: relative
+#tp__canvas
   width: 100%
   height: 70vh
-
-  #tp__canvas
-    bottom: 0
-    top: 0
-    margin: auto
-    position: absolute
-    width: 100%
-    height: 100%
 
 @keyframes floating
   from
@@ -169,3 +185,98 @@ body
      transform: translate(0, -10px)
   to
      transform: translate(0, -0px)
+
+@media screen and (max-height: 1024px) and (max-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+  .grid
+    height: 100vh
+    height: calc(var(--vh, 1vh) * 100)
+  .page
+    margin-top: 5vh
+    margin-bottom: 5vh
+    min-height: 90vh
+    // border: 1px solid orange
+    &__header
+      min-height: 15vh
+      // background-color: red
+      &--no-min
+        min-height: 0
+    &__middle
+      min-height: 60vh
+    &__footer
+      min-height: 15vh
+      // background-color: green
+      .footer__button
+        // background-color: green
+        display: flex
+        flex-wrap: wrap
+        // justify-content: space-evenly
+        width: 46vw
+        & img
+          height: 4.75vh
+      .footer__icon
+        width: 30vh
+        display: flex
+        flex-wrap: wrap
+        // justify-content: space-evenly
+        & img
+          height: 4.75vh
+  #tp__canvas
+    height: 60vh
+    max-height: 60vh
+    // border: 1px solid red
+
+.demo
+  height: 100%
+  width: 100%
+  &--middle
+    vertical-align: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    p
+      display: absolute
+      padding: 10px
+      margin: auto
+      font-family: Roboto
+      text-align: center
+      font-size: 2em
+      color: white
+      vertical-align: middle
+      width: 60vw
+      max-height: 100%
+      text-overflow: ellipsis
+      overflow: auto
+      line-height: 1.2em
+      border: 3px solid white
+
+@media (max-width: 1024px) and (orientation: portrait)
+  .grid
+    height: 100vh
+    height: calc(var(--vh, 1vh) * 100)
+  .page
+    margin-top: 5vh
+    margin-bottom: 5vh
+    min-height: 90vh
+    // border: 1px solid orange
+    &__header
+      min-height: 10vh
+      // background-color: red
+      &--no-min
+        min-height: 0
+    &__middle
+      min-height: 50vh
+      height: 90vh
+    &__footer
+      min-height: 30vh
+      // background-color: green
+      .footer__button
+        & img
+          margin-bottom: 0.4em
+      .footer_icon
+        & img
+          margin-bottom: 0.4em
+  #tp__canvas
+    height: 50vh
+    max-height: 90vh
+    // border: 1px solid red
