@@ -4,7 +4,7 @@ block title
   <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />  
   title TION
 block content
-  .grid
+  .grid.svg
     .grid__wrapper
       <svg class="svg__enter" width="508" height="334" viewBox="0 0 508 334" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="EnterImg">
@@ -93,7 +93,7 @@ block content
 
         section.page#services
           .page__header
-            img(src=require('../images/svg/Servicesbig.svg') class="btn__services")
+            img(src=require('../images/svg/Servicesbig.svg') class="svg__arrow")
           .page__middle
             canvas#tp__canvas
           .page__footer
@@ -115,8 +115,13 @@ block content
                 img(src=require('../images/svg/Contact.svg'))
         section.page#about
           .page__header
-            img(src=require('../images/svg/Aboutbig.svg') class="btn__services")
+            img(src=require('../images/svg/Aboutbig.svg') class="svg__arrow")
           .page__middle
+            .demo.demo--middle
+              p 
+                u OFFICE IPSUM:
+                br
+                | "I need a website. How much will it cost can you make the blue bluer? or can it handle a million in one go."
           .page__footer
             .footer__button
               a(href="#services")
@@ -136,9 +141,13 @@ block content
                 img(src=require('../images/svg/Contact.svg'))
         section.page#portfolio
           .page__header
-            img(src=require('../images/svg/Portfoliobig.svg') class="btn__services")
+            img(src=require('../images/svg/Portfoliobig.svg') class="svg__arrow")
           .page__middle
-            
+            .demo.demo--middle
+              p 
+                u OFFICE IPSUM:
+                br
+                | "Going forward i'll book a meeting so we can solution this before the sprint is over so locked and loaded product management breakout fastworks. Run it up the flagpole, ping the boss and circle back gage [sic] where the industry is heading and give back to the community what we’ve learned."
           .page__footer
             .footer__button
               a(href="#services")

@@ -154,7 +154,7 @@ body
   -moz-transition: transform 0.5s
   -o-transition: transform 0.5s
 
-.btn__services
+.svg__arrow
   top: 0
   bottom: 0
   margin: auto
@@ -225,6 +225,30 @@ body
     max-height: 60vh
     // border: 1px solid red
 
+.demo
+  height: 100%
+  width: 100%
+  &--middle
+    vertical-align: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    p
+      display: absolute
+      padding: 10px
+      margin: auto
+      font-family: Roboto
+      text-align: center
+      font-size: 2em
+      color: white
+      vertical-align: middle
+      width: 60vw
+      max-height: 100%
+      text-overflow: ellipsis
+      overflow: auto
+      line-height: 1.2em
+      border: 3px solid white
 
 @media (max-width: 1024px) and (orientation: portrait)
   .grid
